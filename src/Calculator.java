@@ -8,11 +8,16 @@ public class Calculator {
     static double subtraction(double a, double b){
         return (a-b);
     }
+    static double multiplication(double a, double b){
+        return (a+b);
+    }
 
     public static void main(String[] args) {
         System.out.println("Select a operation");
         System.out.println("1. Addition");
         System.out.println("2. Subtraction");
+        System.out.println("2. Multiplication");
+
 
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -26,6 +31,8 @@ public class Calculator {
                 System.out.println(op1+" + "+op2+" = "+addition(op1,op2));
             case 2:
                 System.out.println(op1+" - "+op2+" = "+subtraction(op1,op2));
+            case 3:
+                System.out.println(op1+" * "+op2+" = "+multiplication(op1,op2));
 
         }
     }
