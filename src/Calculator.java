@@ -12,10 +12,9 @@ public class Calculator {
         return (a*b);
     }
 
-    static double division(double a, double b){
+    static int division(int a, int b) throws ArithmeticException{
         return (a/b);
     }
-
 
 
     public static void main(String[] args) {
@@ -49,8 +48,12 @@ public class Calculator {
                 System.out.println(op1 + " * " + op2 + " = " + multiplication(op1, op2));
                 break;
             case 4:
-                System.out.println(op1 + " / " + op2 + " = " + division(op1, op2));
-                break;
+                try {
+                    System.out.println(op1 + " / " + op2 + " = " + division(op1, op2));
+                    break;
+                }catch (Exception e){
+                    System.out.println(e.getMessage());
+                }
             case 5:
                 System.out.println("Thanks for using");
                 x = 1;
